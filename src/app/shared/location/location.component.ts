@@ -11,6 +11,8 @@ export class LocationComponent implements OnInit {
   latMarket = 0;
   lngMarket = 0;
   zoom = 8
+  isOpenInfo = false
+
 
   constructor() { }
 
@@ -33,6 +35,7 @@ export class LocationComponent implements OnInit {
           this.latMarket = position.coords.latitude;
           this.lngMarket = position.coords.longitude;
           this.zoom = 13;
+          this.isOpenInfo = true;
         });
       }
       

@@ -2,13 +2,13 @@ agm-map {
     height: 300px;
 }
 
-.profile-button {
+.location-button {
     background: #173e53;
     box-shadow: none;
     border: none
 }
 
 
-.profile-button:hover {
+.location-button:hover {
     background: #173e53
 }

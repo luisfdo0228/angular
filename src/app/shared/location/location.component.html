@@ -3,13 +3,19 @@
         [zoom]="zoom"
         [latitude]="lat" 
         [longitude]="lng">
-        <agm-marker 
+        <agm-marker
             [latitude]="latMarket"
             [longitude]="lngMarket">
+
+            <agm-info-window [disableAutoPan]="true" [isOpen]="isOpenInfo">
+                <b>Latitude : {{ latMarket }}</b> <br/>
+                <b>Longitude : {{ lngMarket }}</b> 
+            </agm-info-window>
+
         </agm-marker>
     </agm-map>
 
     <div class="mt-5 text-center">
-        <button (click)="setCurrentLocation('click')" class="btn btn-primary profile-button" type="button">Obtener mi localización</button>
+        <button (click)="setCurrentLocation('click')" class="btn btn-primary location-button" type="button">Obtener mi localización</button>
     </div>
 </div>
