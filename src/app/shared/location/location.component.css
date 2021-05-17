@@ -1,0 +1,14 @@
+agm-map {
+    height: 300px;
+}
+
+.profile-button {
+    background: #173e53;
+    box-shadow: none;
+    border: none
+}
+
+
+.profile-button:hover {
+    background: #173e53
+}

@@ -1,1 +1,15 @@
-<p>location works!</p>
+<div class="container rounded bg-white mt-5 mb-5">
+    <agm-map 
+        [zoom]="zoom"
+        [latitude]="lat" 
+        [longitude]="lng">
+        <agm-marker 
+            [latitude]="latMarket"
+            [longitude]="lngMarket">
+        </agm-marker>
+    </agm-map>
+
+    <div class="mt-5 text-center">
+        <button (click)="setCurrentLocation('click')" class="btn btn-primary profile-button" type="button">Obtener mi localización</button>
+    </div>
+</div>
