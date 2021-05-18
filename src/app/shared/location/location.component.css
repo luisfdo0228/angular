@@ -1,0 +1,14 @@
+agm-map {
+    height: 300px;
+}
+
+.location-button {
+    background: #173e53;
+    box-shadow: none;
+    border: none
+}
+
+
+.location-button:hover {
+    background: #173e53
+}

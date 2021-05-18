@@ -1,0 +1,21 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <agm-map 
+        [zoom]="zoom"
+        [latitude]="lat" 
+        [longitude]="lng">
+        <agm-marker
+            [latitude]="latMarket"
+            [longitude]="lngMarket">
+
+            <agm-info-window [disableAutoPan]="true" [isOpen]="isOpenInfo">
+                <b>Latitude : {{ latMarket }}</b> <br/>
+                <b>Longitude : {{ lngMarket }}</b> 
+            </agm-info-window>
+
+        </agm-marker>
+    </agm-map>
+
+    <div class="mt-5 text-center">
+        <button (click)="setCurrentLocation('click')" class="btn btn-primary location-button" type="button">Obtener mi localización</button>
+    </div>
+</div>

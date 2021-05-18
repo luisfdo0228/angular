@@ -1,0 +1,62 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 border-right">
+            <app-photo-profile></app-photo-profile>
+        </div>
+        <div class="col-md-8 border-right">
+            
+                <div class="p-3 py-5">
+                    <form [formGroup]="profileForm">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Perfil</h4>
+                        </div>
+                        <div class="row mt-2">
+                            
+                            <div class="col-md-12">
+                                <label class="labels">Nombre de usuario</label>
+                                <input type="text" [class.is-invalid]="profileForm.get('nameUser').invalid && profileForm.get('nameUser').touched" class="form-control" placeholder="nombre de usuario" formControlName="nameUser">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label class="labels">Email</label>
+                                <input 
+                                    type="text"
+                                    (change)="get_exist_profile()"
+                                    [class.is-invalid]="profileForm.get('email').invalid && profileForm.get('email').touched" class="form-control" 
+                                    placeholder="email" 
+                                    formControlName="email">
+                            </div>
+                        </div>
+        
+                        <div class="row mt-3">
+                            <div class="col-md-12">
+                                <label class="labels">Genero</label>
+                                <div>
+                                    <input id="male" type="radio" value="male" name="gender" formControlName="gender">
+                                    <label for="male">Masculino</label>
+                                </div>
+                                <div>
+                                    <input id="female" type="radio" value="female" name="gender" formControlName="gender">
+                                    <label for="female">Femenino</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="labels">Biografia</label>
+                                <textarea class="form-control" id="bio" formControlName="bio" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-5 text-center">
+                            <button *ngIf="!edit" class="btn btn-primary profile-button" (click)="submit()" [disabled]="!profileForm.valid" type="button">Guardar</button>
+                            <button *ngIf="edit" class="btn btn-primary profile-button" (click)="submit()" [disabled]="!profileForm.valid" type="button">Editar</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+
